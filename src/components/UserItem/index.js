@@ -1,11 +1,11 @@
 import React from 'react';
 import { Card, CardContent, CardMedia, Typography, Icon } from '@material-ui/core';
 import { useStyles } from './style';
-
-//This compopent is used to render card view of users
+//This component is rendered as user card view
 export const UserItem = props =>{
     const { userData } = props; 
     const classes = useStyles();
+    
     return (
         <>
             <Card className={classes.card}>                

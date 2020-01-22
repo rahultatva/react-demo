@@ -11,6 +11,8 @@ const UsersList = props => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(config.RECORDS_PER_PAGE);
   const [search, setSearch] = useState('');
+  const [sort, setSort] = useState('ASC');
+
   const classes = useStyles();
   const dispatch = useDispatch();
 
@@ -33,6 +35,13 @@ const UsersList = props => {
   };
     
   let filteredUsers = [...users];
+  
+  //sort users
+  if(sort === "ASC"){
+    filteredUsers = filteredUsers.sort((a,b) => `${a.name.first} ${a.name.last}`.localeCompare(`${b.name.first} ${b.name.last}`));
+  }else {
+    filteredUsers = filteredUsers.sort((a,b) => `${b.name.first} ${b.name.last}`.localeCompare(`${a.name.first} ${a.name.last}`));
+  }
 
   //Search users
   filteredUsers = filteredUsers.filter(user=> {      
@@ -52,24 +61,33 @@ const UsersList = props => {
     loader === true ?
       <CircularProgress className={classes.loader}/>
     :
-      <div className={classes.root}>           
-        <Box className={classes.gridLayoutIcons} display={{ xs: 'none', lg: 'block' }}>
-            <Icon onClick={() => {setGridLayout('LIST')}} color={gridLayout === "LIST" ? "secondary":"inherit"}>format_list_bulleted</Icon>
-            <Icon onClick={() => {setGridLayout('GRID')}} color={gridLayout === "GRID" ? "secondary":"inherit"}>apps</Icon>
-        </Box>
-        <Paper component="form" className={classes.searchBox}>                  
-          <InputBase
-            className={classes.searchInput}
-            placeholder="Search"
-            inputProps={{ 'aria-label': 'Search' }}
-            value={search}
-            onChange={(event)=>{setSearch(event.target.value); setPage(0);}}
-          />
-          <IconButton type="submit" className={classes.searchIconButton} aria-label="search">
-            <Icon>search</Icon>
-          </IconButton>        
-        </Paper>
+      <div className={classes.root}>    
+        <div className={classes.usersAction}>
+          {/* Icons for Grid / List layout & sort */}       
+          <Box className={classes.sorttingIcon}>
+              <Icon onClick={() => { setPage(0); setSort(sort === "ASC" ? "DESC" : "ASC")}} color={sort === "ASC" ? "secondary":"inherit"}>sort_by_alpha</Icon>
+          </Box>
+          <Box className={classes.gridLayoutIcons} display={{ xs: 'none', lg: 'block' }}>            
+              <Icon onClick={() => {setGridLayout('LIST')}} color={gridLayout === "LIST" ? "secondary":"inherit"}>format_list_bulleted</Icon>
+              <Icon onClick={() => {setGridLayout('GRID')}} color={gridLayout === "GRID" ? "secondary":"inherit"}>apps</Icon>
+          </Box>
+          
+          {/* Search box */}       
+          <Paper component="form" className={classes.searchBox}>                  
+            <InputBase
+              className={classes.searchInput}
+              placeholder="Search"
+              inputProps={{ 'aria-label': 'Search' }}
+              value={search}
+              onChange={(event)=>{setSearch(event.target.value); setPage(0);}}
+            />
+            <IconButton type="submit" className={classes.searchIconButton} aria-label="search">
+              <Icon>search</Icon>
+            </IconButton>        
+          </Paper>
+        </div>
         
+        {/* Users List */}       
         <Grid container>        
           {
             filteredUsers.length > 0 ? (
@@ -84,6 +102,8 @@ const UsersList = props => {
             )
           }
         </Grid>
+
+        {/* Pagination */}       
         <div className={classes.pagination}>        
             <TablePagination
                 rowsPerPageOptions={[5, 10, 20, 40, 60, 80, 100]}

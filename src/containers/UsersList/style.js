@@ -29,15 +29,18 @@ export const useStyles = makeStyles(theme => ({
       fontWeight : "bold",
       textAlign : "center"
     },
+    usersAction:{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'flex-end',
+      '& > div:first-child': {
+        paddingRight: '12px'          
+      }
+    },
     [theme.breakpoints.up('lg')]: {
-      root: {
-        '& .MuiBox-root':{
-          position: 'absolute',
-          left: '72.8%',
-          transform: 'translateY(12px)',
-          '& > *': {
-            paddingRight: '10px'
-          }
+      gridLayoutIcons : {
+        '& > span': {
+          paddingRight: '12px',
         }
       },
       listLayout: {
