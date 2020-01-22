@@ -4,7 +4,7 @@ import { useStyles } from './style';
 
 //This compopent is used to render card view of users
 export const UserItem = props =>{
-    const { userData, gridLayout } = props; 
+    const { userData } = props; 
     const classes = useStyles();
     return (
         <>

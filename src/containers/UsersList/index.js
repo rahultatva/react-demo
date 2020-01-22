@@ -1,5 +1,5 @@
 import React,{ useEffect, useState } from 'react';
-import { connect } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Grid, TablePagination, InputBase, Paper, IconButton, Box, Icon, CircularProgress } from '@material-ui/core';
 import { UserItem } from "../../components/UserItem";
 import { config } from "../../constants";
@@ -11,13 +11,15 @@ const UsersList = props => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(config.RECORDS_PER_PAGE);
   const [search, setSearch] = useState('');
-  const {getAllUsers, users, loader} = props;
   const classes = useStyles();
+  const dispatch = useDispatch();
 
+  const usersResponse = useSelector(state=>state.users);
+  const users = usersResponse.usersList;
+  const loader = usersResponse.loader;
   useEffect(() => {
-    //fetch all users
-    getAllUsers();    
-  },[getAllUsers]);
+      dispatch({ type: "FETCH_USERS"});    
+  },[dispatch]);
 
   // Handle page change
   const handleChangePage = (event, newPage) => {
@@ -73,7 +75,7 @@ const UsersList = props => {
             filteredUsers.length > 0 ? (
               filteredUsers.map((userData, index) => (     
                 <Grid key={index} item xs={12} sm={6} md={4} lg={gridLayout === "LIST" ? 12 : 3} className={gridLayout === "LIST" ? classes.listLayout : classes.gridLayout}>     
-                  <UserItem userData={userData} gridLayout={gridLayout} />
+                  <UserItem userData={userData} />
                 </Grid>
               ))
             )
@@ -84,7 +86,7 @@ const UsersList = props => {
         </Grid>
         <div className={classes.pagination}>        
             <TablePagination
-                rowsPerPageOptions={[20, 40, 60, 80, 100]}
+                rowsPerPageOptions={[5, 10, 20, 40, 60, 80, 100]}
                 component="div"
                 count={totalRecords}
                 rowsPerPage={rowsPerPage}
@@ -97,15 +99,4 @@ const UsersList = props => {
   );
 }
 
-const mapStateToProps = state => {
-  const {
-    users:{usersList, loader}
-  } = state;
-  return { users:usersList, loader:loader };
-};
-
-const mapDispatchToProps = dispatch => ({
-  getAllUsers: payload => dispatch({ type: "FETCH_USERS", payload })
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(UsersList);
+export default UsersList;
