@@ -99,8 +99,8 @@ const UsersList = props => {
 
 const mapStateToProps = state => {
   const {
-      users:{usersList, loader}
-      } = state;
+    users:{usersList, loader}
+  } = state;
   return { users:usersList, loader:loader };
 };
 

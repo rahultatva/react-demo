@@ -14,12 +14,17 @@ To create build of application for production, build will be created in /build f
 
 ### `npm run build`
 
+To run unit test
+- I have written test case to take snapshot of component, but currently it is taking snapshot of loader screen, we can overcome this issue by using redux mockstore. As it was little bit time consuming I am not able to complete it as of now.
+
+### `npm test`
+
 ## This demo application have follwing features
 
 - Users list with grid and list layout
 - Search users
 - Pagination
-- Mobile responsive
+- Resposive design - Desktop, mobile, tablet friendly
 
 ### Application Snapshot
 ![Application snapshot](snapshot.png)

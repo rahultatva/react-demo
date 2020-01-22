@@ -30,6 +30,16 @@ export const useStyles = makeStyles(theme => ({
       textAlign : "center"
     },
     [theme.breakpoints.up('lg')]: {
+      root: {
+        '& .MuiBox-root':{
+          position: 'absolute',
+          left: '72.8%',
+          transform: 'translateY(12px)',
+          '& > *': {
+            paddingRight: '10px'
+          }
+        }
+      },
       listLayout: {
         display: 'block',
         '& > div': {
@@ -60,6 +70,26 @@ export const useStyles = makeStyles(theme => ({
               fontWeight: 'bold',
               margin: '0'
             }
+          }
+        }
+      }
+    },
+    [theme.breakpoints.down('lg')]: {
+      listLayout: {
+        display: 'flex',
+        '& > div': {
+          width: '100%'
+        }
+      }
+    },
+    [theme.breakpoints.down('sm')]: {
+      root: {
+        width: '100%',
+        margin: '25px auto',
+        '& .MuiTypography-root': {
+          wordBreak: 'break-all',
+          '& .material-icons': {
+            marginLeft: '0'
           }
         }
       }

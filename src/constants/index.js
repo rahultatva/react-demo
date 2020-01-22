@@ -1,5 +1,8 @@
+//API base url
 export const AUTH_API_BASE_URL = 'https://randomuser.me';
 export const config = {
-    RECORDS_PER_PAGE : 20,
+    //Records per page
+    RECORDS_PER_PAGE : 10,
+    //Total records fetched from APIs
     TOTAL_RECORDS : 200
 }

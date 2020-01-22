@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardMedia, Typography, Icon } from '@material-ui/core';
 import { useStyles } from './style';
 
+//This compopent is used to render card view of users
 export const UserItem = props =>{
     const { userData, gridLayout } = props; 
     const classes = useStyles();
@@ -9,9 +10,9 @@ export const UserItem = props =>{
         <>
             <Card className={classes.card}>                
             <CardMedia
-            className={classes.media}
-            image={gridLayout === "LIST" ? userData.picture.thumbnail : userData.picture.large}
-            title=""
+                className={classes.media}
+                image={userData.picture.large}
+                title=""
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
