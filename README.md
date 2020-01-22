@@ -27,4 +27,10 @@ To run unit test
 - Resposive design - Desktop, mobile, tablet friendly
 
 ### Application Snapshot
-![Application snapshot](snapshot.png)
+
+### Application Snapshots
+![Desktop Grid](screenshots/desktop-grid.png)
+![Desktop List](screenshots/desktop-list.png)
+![Mobile](screenshots/mobile.png)
+![Tablet](screenshots/tablet.png)
+
