@@ -26,11 +26,8 @@ To run unit test
 - Pagination
 - Resposive design - Desktop, mobile, tablet friendly
 
-### Application Snapshot
-
 ### Application Snapshots
 ![Desktop Grid](screenshots/desktop-grid.png)
 ![Desktop List](screenshots/desktop-list.png)
-![Mobile](screenshots/mobile.png)
-![Tablet](screenshots/tablet.png)
+![Mobile/Tablet](screenshots/mobile-tablet.png)
 
