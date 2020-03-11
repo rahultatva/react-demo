@@ -1,29 +1,326 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UsersList Component should render without throwing an error 1`] = `
+exports[`should render correctly <NewsItem> 1`] = `
 <div
-  className="MuiCircularProgress-root makeStyles-loader-6 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
-  role="progressbar"
-  style={
-    Object {
-      "height": 40,
-      "width": 40,
-    }
-  }
+  className="makeStyles-root-1"
 >
-  <svg
-    className="MuiCircularProgress-svg"
-    viewBox="22 22 44 44"
+  <h1>
+    Test page
+  </h1>
+  <div
+    className="makeStyles-usersAction-8"
   >
-    <circle
-      className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
-      cx={44}
-      cy={44}
-      fill="none"
-      r={20.2}
-      strokeWidth={3.6}
-      style={Object {}}
-    />
-  </svg>
+    <div
+      className="MuiBox-root MuiBox-root-12"
+    >
+      <span
+        aria-hidden={true}
+        className="material-icons MuiIcon-root MuiIcon-colorSecondary"
+        onClick={[Function]}
+      >
+        sort_by_alpha
+      </span>
+    </div>
+    <div
+      className="MuiBox-root MuiBox-root-22 makeStyles-gridLayoutIcons-9"
+    >
+      <span
+        aria-hidden={true}
+        className="material-icons MuiIcon-root MuiIcon-colorSecondary"
+        onClick={[Function]}
+      >
+        format_list_bulleted
+      </span>
+      <span
+        aria-hidden={true}
+        className="material-icons MuiIcon-root"
+        onClick={[Function]}
+      >
+        apps
+      </span>
+    </div>
+    <form
+      className="MuiPaper-root makeStyles-searchBox-3 MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <div
+        className="MuiInputBase-root makeStyles-searchInput-4"
+        onClick={[Function]}
+      >
+        <input
+          aria-label="Search"
+          className="MuiInputBase-input"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="Search"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        aria-label="search"
+        className="MuiButtonBase-root MuiIconButton-root makeStyles-searchIconButton-5"
+        disabled={false}
+        onBlur={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="submit"
+      >
+        <span
+          className="MuiIconButton-label"
+        >
+          <span
+            aria-hidden={true}
+            className="material-icons MuiIcon-root"
+          >
+            search
+          </span>
+        </span>
+      </button>
+    </form>
+  </div>
+  <div
+    className="MuiGrid-root MuiGrid-container"
+  >
+    <div
+      className="MuiGrid-root makeStyles-listLayout-10 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-12"
+    >
+      <div
+        className="MuiPaper-root MuiCard-root makeStyles-card-186 MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <div
+          className="MuiCardMedia-root makeStyles-media-187"
+          style={
+            Object {
+              "backgroundImage": "url(\\"https://randomuser.me/api/portraits/men/84.jpg\\")",
+            }
+          }
+          title=""
+        />
+        <div
+          className="MuiCardContent-root"
+        >
+          <h2
+            className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+          >
+            Mr Aaron Bruland
+          </h2>
+          <p
+            className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            <span
+              aria-hidden={true}
+              className="material-icons MuiIcon-root MuiIcon-colorSecondary"
+            >
+              email
+            </span>
+            aaron.bruland@example.com
+          </p>
+          <p
+            className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            <span
+              aria-hidden={true}
+              className="material-icons MuiIcon-root MuiIcon-colorSecondary"
+            >
+              location_on
+            </span>
+            Meldal, Finnmark - Finnmárku
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root makeStyles-listLayout-10 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-12"
+    >
+      <div
+        className="MuiPaper-root MuiCard-root makeStyles-card-186 MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <div
+          className="MuiCardMedia-root makeStyles-media-187"
+          style={
+            Object {
+              "backgroundImage": "url(\\"https://randomuser.me/api/portraits/women/18.jpg\\")",
+            }
+          }
+          title=""
+        />
+        <div
+          className="MuiCardContent-root"
+        >
+          <h2
+            className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+          >
+            Mrs Isabella Vargas
+          </h2>
+          <p
+            className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            <span
+              aria-hidden={true}
+              className="material-icons MuiIcon-root MuiIcon-colorSecondary"
+            >
+              email
+            </span>
+            isabella.vargas@example.com
+          </p>
+          <p
+            className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+          >
+            <span
+              aria-hidden={true}
+              className="material-icons MuiIcon-root MuiIcon-colorSecondary"
+            >
+              location_on
+            </span>
+            Dubbo, New South Wales
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="MuiTablePagination-root"
+    >
+      <div
+        className="MuiToolbar-root MuiToolbar-regular MuiTablePagination-toolbar MuiToolbar-gutters"
+      >
+        <div
+          className="MuiTablePagination-spacer"
+        />
+        <p
+          className="MuiTypography-root MuiTablePagination-caption MuiTypography-body2 MuiTypography-colorInherit"
+        >
+          Rows per page:
+        </p>
+        <div
+          className="MuiInputBase-root MuiTablePagination-input MuiTablePagination-selectRoot"
+          onClick={[Function]}
+        >
+          <div
+            aria-haspopup="listbox"
+            aria-labelledby=" "
+            className="MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            20
+          </div>
+          <input
+            onAnimationStart={[Function]}
+            type="hidden"
+            value={20}
+          />
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root MuiSelect-icon MuiTablePagination-selectIcon"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+        <p
+          className="MuiTypography-root MuiTablePagination-caption MuiTypography-body2 MuiTypography-colorInherit"
+        >
+          1-2 of 2
+        </p>
+        <div
+          className="MuiTablePagination-actions"
+        >
+          <button
+            aria-label="Previous page"
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit Mui-disabled Mui-disabled"
+            disabled={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={-1}
+            title="Previous page"
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+                />
+              </svg>
+            </span>
+          </button>
+          <button
+            aria-label="Next page"
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit Mui-disabled Mui-disabled"
+            disabled={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={-1}
+            title="Next page"
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
